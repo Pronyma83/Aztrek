@@ -1,0 +1,146 @@
+#menu-pays {
+    display: none;
+}
+
+#costarica {
+    display: none;
+}
+
+#guatemala {
+    display: none;
+}
+
+#honduras {
+    display: none;
+}
+
+#mexique {
+    display: none;
+}
+
+#salvador {
+    display: none;
+}
+
+.menu-list{
+    background-color: $light-grey;
+    
+}
+
+.menu-list li{
+    text-align: center;
+    padding: 10px;
+}
+
+.menu-list p{
+    color: $white;
+}
+
+
+@media (min-width: $bp-medium) {
+
+    #menu-pays {
+        position: absolute;
+    }
+
+    .menu-pays-liste>li {
+        width: 215px;
+        position: relative;
+    }
+
+    .menu-sejours {
+        background-color: $dark-grey;
+        position: absolute;
+        left: 215px;
+        top: 0;
+    }
+
+}
+
+.menu-sejours li {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.menu-sejours-select {
+    background: $dark-orange;
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.menu-open {
+    background: url('../images/line-menu.png');
+    background-size: cover;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    margin: $marge;
+    border: none;
+    @media (min-width: $bp-medium) {
+        display: none;
+    }
+}
+
+.menu-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+    @media (min-width: $bp-medium) {
+        display: none;
+    }
+}
+
+.main-menu {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    min-height: 100vh;
+    left: -100%;
+    z-index: 100;
+    transition: .5s;
+    background: #000;
+
+    &.show {
+        left: 0;
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    @media (min-width: $bp-medium) {
+        position: static;
+        width: auto;
+        min-height: auto;
+        display: flex;
+        background: none;
+    }
+}
+
+.nav-right {
+    @media (min-width: $bp-medium) {
+        display: flex;
+    }
+}
+
+.nav-right li{
+    padding: 10px 0;
+
+    @media (min-width: $bp-medium) {
+        padding: 0;
+    }
+}
+
+.destination{
+    padding: 10px 0;
+
+    @media (min-width: $bp-medium) {
+        padding: 0;
+    }
+}

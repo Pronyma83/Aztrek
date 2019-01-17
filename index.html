@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="./images/favicon.ico" />
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Aztrek</title>
+</head>
+
+<body>
+
+
+    <header>
+
+        <nav class="nav-header">
+            <div class="logo-header">
+                <img src="./images/logo-header.png" alt="logo aztrek">
+            </div>
+            <button class="menu-open"></button>
+            <div class="main-menu">
+                <button class="menu-close">Fermer</button>
+                <div id="menu-destination" class="destination">
+                    <a href="#" onclick="openPays()">Destination</a>
+                    <div id="menu-pays" class="menu-list">
+                        <p>Tous nos voyages</p>
+                        <ul class="menu-pays-liste">
+                            <li>
+                                <a href="#" id="costaricatitle" onclick="openSejours(costaricatitle, costarica)">Costa
+                                    Rica</a>
+                                <ul id="costarica" class="menu-sejours">
+                                    <li><a href="#">Séjour1</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" id="guatemalatitle" onclick="openSejours(guatemalatitle, guatemala)">Guatémala</a>
+                                <ul id="guatemala" class="menu-sejours">
+                                    <li><a href="#">Séjour1</a></li>
+                                    <li><a href="#">Séjour2</a></li>
+                                    <li><a href="#">Séjour3</a></li>
+                                    <li><a href="#">Séjour4</a></li>
+                                    <li><a href="#">Séjour5</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" id="hondurastitle" onclick="openSejours(hondurastitle, honduras)">Honduras</a>
+                                <ul id="honduras" class="menu-sejours">
+                                    <li><a href="#">Séjour1</a></li>
+                                    <li><a href="#">Séjour2</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#" id="mexiquetitle" onclick="openSejours(mexiquetitle, mexique)">Mexique</a>
+                                <ul id="mexique" class="menu-sejours">
+                                    <li><a href="#"><img src="./images/chichenitza.jpg" alt=""> </a>
+                                        <p>Trésors du Yucatàn</p>
+                                    </li>
+                                    <li><a href="#">Comminando Mexico <img src="./images/mexico.jpg" alt=""> </a></li>
+                                    <li><a href="#">Les Volcans <img src="./images/volcan.jpg" alt=""> </a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" id="salvadortitle" onclick="openSejours(salvadortitle, salvador)">Salvador</a>
+                                <ul id="salvador" class="menu-sejours">
+                                    <li><a href="#">Séjour1</a></li>
+                                    <li><a href="#">Séjour2</a></li>
+                                    <li><a href="#">Séjour3</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <ul class="nav-right">
+                    <li><a href="#">Vos expériences</a></li>
+                    <li><a href="#">Écrivez-nous !</a></li>
+                    <li><a href="#">Connexion</a></li>
+                    <li>Appelez-nous au 02.XX.XX.XX.XX</li>
+                </ul>
+            </div>
+        </nav>
+        <div class="header-title container">
+            <h1>AZTREK</h1>
+            <h2>Un nouveau monde à chaque pas</h2>
+        </div>
+        <ul class="reseau-sociaux">
+            <li><a href="#"><img src="./images/facebook-header.png" alt=""></a></li>
+            <li><a href="#"><img src="./images/twitter-header.png" alt=""></a></li>
+            <li><a href="#"><img src="./images/instagram-header.png" alt=""></a></li>
+            <li><a href="#"><img src="./images/youtube-header.png" alt=""></a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section class="container">
+            <div>
+                <h3>AZTREK</h3>
+            </div>
+            <p>Organisateur de voyage au Mexique, AZTREK propose des circuits hors des sentiers battus pour découvrir
+                les régions les plus authentiques de l’Amérique centrale. AZTREK s’inscrit dans une démarche
+                d’écotourisme en planifiant des voyages responsables, dans des zones naturelles, en respectant
+                l’environnement et en travaillant en collaboration avec les populations locales.
+            </p>
+            <img src="./images/lisa.jpg" alt="" class="photo">
+            <p>L’équipe de AZTREK vous accompagnera dans les démarches de préparation de votre voyage avant de vous
+                guider à travers cette terre de contraste.
+            </p>
+            <img src="./images/groupe.jpg" alt="" class="photo">
+            <p>Pour l’organisation de votre voyage au Mexique, choisissez l’agence de voyage AZTREK !
+            </p>
+
+            <div class="photo1"></div>
+            <div class="photo2"></div>
+        </section>
+
+        <section class="slider">
+            <h3>Besoin d'inspiration ?</h3>
+            <div class="owl-carousel owl-slider">
+                <article class="item">
+                    <img src="./images/costa-rica-slider.jpg" alt="costa rica">
+                    <div class="infos container">
+                        <h3>Costa Rica</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius cum consectetur earum
+                            assumenda provident id commodi aut non numquam officiis?</p>
+                        <a href="" class="btn">Découvrir</a>
+                    </div>
+                </article>
+                <article class="item">
+                    <img src="./images/Guatemala-slider.jpg" alt="guatemala">
+                    <div class="infos container">
+                        <h3>Guatémala</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius cum consectetur earum
+                            assumenda provident id commodi aut non numquam officiis?</p>
+                        <a href="" class="btn">Découvrir</a>
+                    </div>
+                </article>
+                <article class="item">
+                    <img src="./images/honduras-slider.jpg" alt="honduras">
+                    <div class="infos container">
+                        <h3>Honduras</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius cum consectetur earum
+                            assumenda provident id commodi aut non numquam officiis?</p>
+                        <a href="" class="btn">Découvrir</a>
+                    </div>
+                </article>
+                <article class="item">
+                    <img src="./images/mexique-slider.jpg" alt="mexique">
+                    <div class="infos container">
+                        <h3>Mexique</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius cum consectetur earum
+                            assumenda provident id commodi aut non numquam officiis?</p>
+                        <a href="" class="btn">Découvrir</a>
+                    </div>
+                </article>
+                <article class="item">
+                    <img src="./images/salvador-slider.jpg" alt="salvador">
+                    <div class="infos container">
+                        <h3>Salvador</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius cum consectetur earum
+                            assumenda provident id commodi aut non numquam officiis?</p>
+                        <a href="" class="btn">Découvrir</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="container">
+            <h3>Partagez vos expériences</h3>
+            <div class="article">
+                <article>
+                    <div>
+                        <a href="#"><img src="./images/julien.jpg" alt="photo julien"></a>
+                        <h4 class="position">Julien</h4>
+                        <p class="position">120 Likes</p>
+                    </div>
+                    <div>
+                        <p>Départ le : 12/07/2010</p>
+                        <img class="notation" src="./images/smile.png" alt="satisfaction">
+                        <p>Iam in altera philosophiae parte. quae est quaerendi ac disserendi…</p>
+                        <a href="#">En lire plus</a>
+                        <button><img class="likes" src="./images/like-white.png" alt="like"></button>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <a href="#"><img src="./images/romain.jpg" alt="photo julien"></a>
+                        <h4 class="position">Julien</h4>
+                        <p class="position">120 Likes</p>
+                    </div>
+                    <div>
+                        <p>Départ le : 12/07/2010</p>
+                        <img class="notation" src="./images/smile.png" alt="satisfaction">
+                        <p>Iam in altera philosophiae parte. quae est quaerendi ac disserendi…</p>
+                        <a href="#">En lire plus</a>
+                        <button><img class="likes" src="./images/like-white.png" alt="like"></button>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <a href="#"><img src="./images/karen.jpg" alt="photo julien"></a>
+                        <h4 class="position">Julien</h4>
+                        <p class="position">120 Likes</p>
+                    </div>
+                    <div>
+                        <p>Départ le : 12/07/2010</p>
+                        <img class="notation" src="./images/smile.png" alt="satisfaction">
+                        <p>Iam in altera philosophiae parte. quae est quaerendi ac disserendi…</p>
+                        <a href="#">En lire plus</a>
+                        <button><img class="likes" src="./images/like-white.png" alt="like"></button>
+                    </div>
+                </article>
+            </div>
+            <a class="btn" href="#">Voir plus d'expériences</a>
+        </section>
+
+    </main>
+
+    <footer class="">
+        <section class="footer container">
+            <a href="#"><img src="./images/logo-footer.png" alt="logo aztrek"></a>
+
+            <div class="contact-footer">
+                <a href="#">Qui sommes-nous ?</a>
+                <a href="#">Écrivez-nous !</a>
+                <p>aztrek@sqdg.com</p>
+                <p>Appelez-nous ! <br>
+                    02.XX.XX.XX.XX</p>
+            </div>
+
+            <div class="label">
+                <img src="./images/label.png" alt="label">
+            </div>
+
+            <nav class="nav-footer">
+                <p>Qui m'aime me suive !</p>
+                <ul class="reseau-sociaux-footer">
+                    <li><a href="#"><img src="./images/facebook-footer.png" alt=""></a></li>
+                    <li><a href="#"><img src="./images/twitter-footer.png" alt=""></a></li>
+                    <li><a href="#"><img src="./images/instagram-footer.png" alt=""></a></li>
+                    <li><a href="#"><img src="./images/youtube-footer.png" alt=""></a></li>
+                </ul>
+            </nav>
+            <p>Aztrek © 2018 - <a href="#">Crédits et Mentions légales</a></p>
+        </section>
+
+    </footer>
+
+
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/navigation.js"></script>
+    <script src="./js/scripts.js"></script>
+
+</body>
+
+</html>

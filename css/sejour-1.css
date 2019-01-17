@@ -1,0 +1,390 @@
+/*=========================================
+                BASE
+==========================================*/
+
+/* nuancier
+
+#542D25
+#804531
+
+*/
+
+
+body{
+    margin: 0;
+    font-family: 'Trebuchet MS', Arial, Verdana, sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.contenair{
+    width: 960px;
+    margin: 0 auto;
+}
+
+img{
+    display: block;
+}
+
+.gauche aside,
+.droite aside{
+    display: flex;
+    flex-wrap: wrap;
+    width: 530px;
+}
+
+aside img {
+    margin: 10px;
+}
+
+.gauche-title {
+    width: 100%;
+    text-align: center;
+}
+
+/*=========================================
+                NAV
+==========================================*/
+
+.main-nav{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.main-nav ul{
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.main-nav li{
+    display: inline-block;
+}
+
+.main-nav ul li a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #804531;
+
+}
+
+.main-nav li a:hover, .main-nav li a.active{
+    background: #804531;
+    color: #fff
+}
+
+
+/*=========================================
+                HEADER
+==========================================*/
+
+header{
+    background: url('../images/bg-header-s1.jpg') center top;
+    background-size: cover;
+    min-height: 540px;
+    position: relative;
+}
+
+.titre{
+    color: #fff;
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    margin-top: 140px;
+}
+
+h2{
+    margin: 0;
+}
+
+.reseaux-sociaux {
+    margin:0 auto;
+    text-align: center;
+}
+.reseaux-sociaux ul{
+    display: flex;
+    background: #fff;
+    border: rgba(2, 2, 2, 0.7) solid 1px;
+    border-radius: 50px;
+    justify-content: center;
+    padding: 0 70px;
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: -33px;
+    margin-top: 0;
+    margin-left: 280px;
+    padding: 10px;
+
+}
+
+.reseaux-sociaux ul li{
+    list-style: none;
+    font-size: 0;
+    display: flex;
+    padding: 0px 30px;
+    align-items: center;
+}
+
+.reseaux-sociaux ul li #facebook{
+    background-image: url('../images/facebook.png');
+    height: 40px;
+    width: 40px;
+} 
+.reseaux-sociaux ul li #twitter{
+    background-image: url('../images/twitter.png');
+    height: 40px;
+    width: 40px;
+}
+.reseaux-sociaux ul li #instagram{
+    background-image: url('../images/instagram.png');
+    height: 40px;
+    width: 40px;
+}
+.reseaux-sociaux ul li #youtube{
+    background-image: url('../images/youtube.png');
+    height: 40px;
+    width: 40px;
+}
+
+/*=========================================
+            PRESENTATION
+==========================================*/
+
+#presentation{
+    display: flex;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.presentation{
+    width: 620px;
+    padding-top: 40px;
+}
+
+.aside-presentation{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.presentation ul li:nth-of-type(1){
+    padding-right: 79px;
+}
+
+.presentation ul li:nth-of-type(3){
+    padding-right: 50px;
+}
+
+.galerie-presentation figcaption{
+    width: 200px;
+    font-size: 0.75rem;
+    font-style: italic;
+}
+
+/*=========================================
+                JOUR 1
+==========================================*/
+
+#jour-1{
+    background: url('../images/bg-j1.jpg') center top;
+    background-size: cover;
+    min-height: 300px;
+}
+
+.vol-jour-1{
+    text-align: center;
+    padding: 40px;
+}
+
+.vol-jour-1 h3{
+padding-top:100px;
+}
+
+/*=========================================
+                JOUR 2
+==========================================*/
+
+.gauche{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px auto;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    width: 420px;
+    align-items: center;
+    text-align: center;
+}
+
+.text ul{
+    text-align: left;
+}
+
+.gauche-title {
+    width: 100%;
+    text-align: center;
+}
+
+aside,
+.gauche article {
+    margin: 40px auto;
+    margin-bottom: auto;
+}
+
+/*=========================================
+                JOUR 3
+==========================================*/
+
+.droite{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px auto;
+    flex-direction: row-reverse;
+}
+
+/* .text {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    align-items: center;
+    text-align: center;
+} */
+
+/* .text ul{
+    text-align: left;
+} */
+
+
+
+aside,
+.gauche article {
+    margin: 40px auto;
+    margin-bottom: auto;
+}
+
+/*=========================================
+                JOUR 6
+==========================================*/
+
+#jour-6{
+    background: url('../images/bg-jour6.jpg') center top;
+    background-size: cover;
+    min-height: 400px;
+}
+
+.vol-jour-6{
+    text-align: center;
+    padding-top: 50px;
+}
+
+.vol-jour-6 h3{
+    margin: 50px 0;
+}
+
+/*=========================================
+                ITINÉRAIRE
+==========================================*/
+
+#plan{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#plan h2{
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+.article{
+    width: 40%;
+    margin-top: 70px;
+}
+/*=========================================
+             AUTRE SÉJOUR
+==========================================*/
+
+.sejour-plus{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+}
+
+.sejour-plus h2{
+    width: 100%;
+    text-align: center;
+    margin: 50px auto;
+}
+
+.btn{
+    background: #804531;
+    color: #fff;
+    padding: 5px 20px;
+    margin: 0px 50px 20px;
+    font-size: 1.25rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+/*=========================================
+                FOOTER
+==========================================*/
+
+footer{
+    background: #542D25;
+    color: #fff;
+    display: flex;
+}
+
+#main-footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.article-footer{
+    margin: 50px 0;
+}
+
+.mentions-legale p, .mentions-legale a{
+    font-size: 0.75rem;
+}
+
+.mentions-legale p{
+    padding-top: 170px;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+/*=========================================
+                SÉJOUR 2
+==========================================*/
+
+#header-sejour-2{
+    background: url('../images/bg-header-s2.jpg') center top;
+    background-size: cover;
+}
+
+/*=========================================
+                SÉJOUR 3
+==========================================*/
+
+#header-sejour-3{
+    background: url('../images/bg-header-s2.jpg') center top;
+    background-size: cover;
+}
+
+.presentation-sejour-3{
+    width: 480px;
+}
