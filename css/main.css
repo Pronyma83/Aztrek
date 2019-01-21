@@ -326,7 +326,8 @@ img {
 
 h1, h2, h3 {
   font-family: 'sansation', 'Trebuchet MS', sans-serif;
-  font-size: 2rem; }
+  font-size: 2rem;
+  margin: 0 auto; }
 
 body {
   font-family: "Trebuchet MS", sans-serif; }
@@ -492,7 +493,8 @@ h1, h2 {
 .notation {
   width: 30px; }
 
-button, [type="button"] {
+button,
+[type="button"] {
   width: 50px;
   border: none;
   border-radius: 5px;
@@ -533,7 +535,8 @@ h3 {
   margin: 0 auto;
   padding: 30px; }
 
-h3:before, h3:after {
+h3:before,
+h3:after {
   content: '';
   width: 3rem;
   border-bottom: #FF6F00 solid 8px;
@@ -549,7 +552,8 @@ h3:after {
   margin-left: 0.5rem; }
 
 main {
-  background-color: #FCF5EF; }
+  background-color: #FCF5EF;
+  padding: 20px 0 20px; }
 
 .photo {
   border: solid #fff;
@@ -560,6 +564,70 @@ main {
 
 .photo:nth-of-type(2) {
   transform: rotate(-25deg); }
+
+#pays {
+  display: flex;
+  justify-content: center; }
+
+.pays-img img {
+  width: 900px;
+  padding: 20px;
+  margin-bottom: 50px; }
+
+.pays-img h2 {
+  text-align: center; }
+
+.presentation {
+  margin: 0 auto;
+  padding: 20px 0 20px;
+  width: 600px; }
+
+#presentation {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 0 40px 0; }
+
+#presentation img {
+  width: 400px;
+  padding-top: 40px; }
+
+.depart {
+  text-align: center;
+  padding-top: 100px; }
+
+body {
+  margin: 0%;
+  font-family: Verdana, sans-serif; }
+
+* {
+  box-sizing: border-box; }
+
+table a {
+  color: #020452; }
+
+table {
+  width: 70%;
+  margin: 40px auto;
+  border-collapse: collapse; }
+
+tr:nth-of-type(odd) {
+  background-color: #eee; }
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 20px 15px; }
+
+th {
+  background-color: #ccc;
+  color: #fff;
+  text-align: left; }
+
+td:nth-of-type(1),
+td:nth-last-of-type(2) {
+  color: #e2630e;
+  font-family: monospace, 'Monaco Normal';
+  width: 20%; }
 
 footer {
   background-color: #404040; }
