@@ -4,6 +4,8 @@ require_once 'functions.php';
 
 getHeader("Sejour", "Detail du sejour...");
 
+$liste_depart = getAllDepart()
+
 
 ?>
 
@@ -48,12 +50,12 @@ getHeader("Sejour", "Detail du sejour...");
         <section class="depart">
                 <h2>Nos Départs</h2>
                 <table>
-                    <?php foreach () : ?>
+                    <?php foreach ($liste_depart as $depart) : ?>
                     <tr>
-                        <th>Du</th>
+                        <th><?= $depart['date_depart_format']; ?></th>
                         <th>Au</th>
-                        <th>Prix</th>
-                        <th>Départ Assuré<br> à partir de </th>
+                        <th><?= $depart['prix']; ?> €</th>
+                        <th>Place restante </th>
                         <th>Description de l'exemple</th>
                     </tr>
                     <?php endforeach; ?>
