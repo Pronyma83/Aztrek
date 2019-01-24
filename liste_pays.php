@@ -29,7 +29,7 @@ getHeader("Pays", "Liste de tout nos pays");
 
             <?php foreach ($liste_pays as $pays) : ?>
                 <h2><?= $pays['titre'] ?></h2>
-                <a href="sejour.php">
+                <a href="liste_sejours.php?id=<?= $pays['id'] ?>">
                     <img src="uploads/<?= $pays['image'] ?>" alt="">
                 </a>
             <?php endforeach; ?>

@@ -59,7 +59,8 @@
         <ul class="nav-right">
             <li><a href="#">Vos expériences</a></li>
             <li><a href="#">Écrivez-nous !</a></li>
-            <li><a href="#">Connexion</a></li>
+            <li class="item"><a href="<?= SITE_ADMIN; ?>"><i class="fa fa-sign-in"></i> Connexion</a>
+            <li class="item"><a href="<?= SITE_URL . "create_account.php"; ?>"><i class="fa fa-user-plus"></i> S'inscrire</a></li>
             <li>Appelez-nous au 02.XX.XX.XX.XX</li>
         </ul>
     </div>

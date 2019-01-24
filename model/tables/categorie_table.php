@@ -3,7 +3,7 @@
 function insertCategorie(string $libelle) {
     global $connection;
 
-    $query = "INSERT INTO categorie (libelle) VALUES (:libelle)";
+    $query = "INSERT INTO pays (libelle) VALUES (:libelle)";
 
     $stmt = $connection->prepare($query);
     $stmt->bindParam(":libelle", $libelle);
@@ -13,7 +13,7 @@ function insertCategorie(string $libelle) {
 function updateCategorie(int $id, string $libelle) {
     global $connection;
 
-    $query = "UPDATE categorie SET libelle= :libelle WHERE id = :id";
+    $query = "UPDATE pays SET libelle= :libelle WHERE id = :id";
 
     $stmt = $connection->prepare($query);
     $stmt->bindParam(":id", $id);

@@ -2,11 +2,11 @@
 require_once 'model/database.php';
 require_once 'functions.php';
 
+$id = $_GET["id"];
+$sejour = getOneEntity("sejour", $id);
+$liste_depart = getAllDepart();
+
 getHeader("Sejour", "Detail du sejour...");
-
-$liste_depart = getAllDepart()
-
-
 ?>
 
 
@@ -51,13 +51,15 @@ $liste_depart = getAllDepart()
                 <h2>Nos Départs</h2>
                 <table>
                     <?php foreach ($liste_depart as $depart) : ?>
-                    <tr>
-                        <th><?= $depart['date_depart_format']; ?></th>
-                        <th>Au</th>
-                        <th><?= $depart['prix']; ?> €</th>
-                        <th>Place restante </th>
-                        <th>Description de l'exemple</th>
-                    </tr>
+                    <?php if ($id == $depart['sejour_id']) : ?>
+                        <tr>
+                            <th><?= $depart['date_depart_format']; ?></th>
+                            <th>Au</th>
+                            <th><?= $depart['prix']; ?> €</th>
+                            <th>Place restantes </th>
+                            <th>Description de l'exemple</th>
+                        </tr>
+                    <?php endif; ?>
                     <?php endforeach; ?>
 
                 </table>

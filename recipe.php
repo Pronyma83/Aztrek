@@ -37,7 +37,7 @@ require_once "layout/header.php"?>
     </section>
 
     <div class="label"><a href="#" class="like"><i class="fa fa-heart"></i></a> <?= $recipe["nb_likes"]; ?></div>
-    <div class="label"><i class="fa fa-cutlery"></i> <?= $recipe["categorie"]; ?></div>
+    <div class="label"><i class="fa fa-cutlery"></i> <?= $recipe["pays"]; ?></div>
     <div class="label"><i class="fa fa-user"></i> <?= $recipe["pseudo"]; ?>.</div>
 
   </main>
