@@ -4,7 +4,7 @@ require_once 'functions.php';
 
 $id = $_GET["id"];
 $sejour = getOneEntity("sejour", $id);
-$liste_depart = getAllDepart();
+$liste_depart = getAllDepartSejour($id);
 
 getHeader("Sejour", "Detail du sejour...");
 ?>
@@ -27,42 +27,60 @@ getHeader("Sejour", "Detail du sejour...");
     <main>
         <section id="presentation" class="contenair">
             <article class="presentation">
-                <h2>Trésors du Yucatán</h2>
-                <p>Le Mexique, et en particulier le Yucatán, est une terre de rêve.</p>
-                <p>Elle y mêle quelques-uns des plus beaux sites mayas, riche patrimoine culturel, et des trésors
-                    naturels, comme la mer des Caraïbes ou les cenotes, ces puits souterrains ou à ciel ouvert, trous
-                    d’eau qui parsèment le plateau calcaire du Yucatán.</p>
-                <p>L’âme indienne y est bien vivante, celle de la civilisation raffinée des Mayas à leur grande époque
-                    bien sûr, mais également celle des Mayas d’aujourd’hui, qui ont gardé leurs us et coutumes.</p>
-                <ul>
-                    <li>6 jours</li>
-                    <li>à partir de 3290 €</li>
-                    <li>Niveau 1/5</li>
-                </ul>
+                <div class="col-md-4">
+                    <h2><?= $sejour['titre'] ?></h2>
+                    <p><?= $sejour['description'] ?></p>
+                    <p>Durée: <?= $sejour['duree'] ?> jours</p>
+                    <p>Difficulté :
+                        <?php $difficulte = getOneEntity('difficulte', $sejour['difficulte_id'])["id"]; ?>
+                        <?php for($i = 1; $i <= 4; $i++) : ?>
+                            <?php if ($i <= $difficulte) : ?>
+                                <i class="fa fa-star"></i>
+                            <?php else: ?>
+                                <i class="fa fa-star-o"></i>
+                            <?php endif; ?>
+                        <?php endfor; ?>
+                    </p>
+
+                    <p>Prix :
+                        <?= getOneEntity("depart", $sejour['id'])["prix"] ?>
+                        <i class="fa fa-euro"></i>
+                    </p>
+                </div>
             </article>
 
             <aside>
-                <img src="./uploads/s1-j3-d.jpg" alt="">
+                <img src="uploads/<?= $sejour['image'] ?>" alt="">
             </aside>
 
         </section>
 
         <section class="depart">
-                <h2>Nos Départs</h2>
-                <table>
-                    <?php foreach ($liste_depart as $depart) : ?>
-                    <?php if ($id == $depart['sejour_id']) : ?>
-                        <tr>
-                            <th><?= $depart['date_depart_format']; ?></th>
-                            <th>Au</th>
-                            <th><?= $depart['prix']; ?> €</th>
-                            <th>Place restantes </th>
-                            <th>Description de l'exemple</th>
-                        </tr>
-                    <?php endif; ?>
-                    <?php endforeach; ?>
-
-                </table>
+            <h2>Nos Départs</h2>
+            <table>
+                <?php foreach ($liste_depart as $depart) : ?>
+                    <tr>
+                        <th><?= $depart['date_depart_format']; ?></th>
+                        <th>Au</th>
+                        <th><?= $depart['prix']; ?> €</th>
+                        <th>Places : <?= $depart['nb_places']; ?></th>
+                        <?php $nombre_place_restantes = getNombrePlaceRestantesJoin($depart['id']); ?>
+                        <th><label>Places restantes : <?= $nombre_place_restantes ?></label></th>
+                        <th>
+                            <label>Nombre de personne :</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <?php for ($i = 1; $i <= $nombre_place_restantes; $i++) : ?>
+                                    <option><?= $i ?></option>
+                                <?php endfor; ?>
+                            </select>
+                        </th>
+                        <th>
+                            <button>Réserver</button>
+                        </th>
+                    </tr>
+                <?php endforeach; ?>
+            </table>
+        </section>
 
     </main>
 

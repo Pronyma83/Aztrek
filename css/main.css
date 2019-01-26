@@ -314,7 +314,7 @@ nav ul {
   padding: 0; }
 
 a {
-  color: #fff;
+  color: #fff !important;
   text-decoration: none; }
   a:focus, a:hover {
     text-decoration: underline; }
